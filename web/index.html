@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="/" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="flutter_app_test" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>flutter_app_test</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = "1928223971";
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+    <script
+      type="text/javascript"
+      defer
+      src="https://cdn.jsdelivr.net/gh/TarakaSwathi123/apxor_version_new11@main/112233coree.js"
+    ></script>
+
+    <!-- Initializing Apxor QE -->
+    <script
+      type="text/javascript"
+      defer
+      src="https://unpkg.com/apxor-qe@qa"
+    ></script>
+
+    <script
+      type="text/javascript"
+      defer
+      src="apxor.rtm.min.js"
+    ></script>
+
+    <script>
+      const _d = new Date();
+      (function (a, p, x, o, r) {
+        Apxor = a.Apxor || { _q: [], _st: _d };
+        [
+          "init",
+          "setUserId",
+          "setUserProperties",
+          "setSessionProperties",
+          "logPageView",
+          "logEvent",
+          "logClientEvent",
+          "setAppVersion",
+          "getClientId",
+          "getSessionId",
+          "startNewSession",
+          "endSession",
+          "flattenJSON",
+          "setRedirectionHandler",
+          "setIsFlutter",
+          "registerApxorFlutterHelper"
+        ].forEach(function (m) {
+          Apxor[m] = function () {
+            this._q.push({ m: m, args: arguments });
+          };
+        });
+      })(window, document, "script");
+
+      Apxor.init(
+        "a20328fd-a092-463c-9e4a-e2503148d6b6",
+        {
+          idle_time_out: 1800,
+          plugins: ["ApxorRTM"],
+          version: 144,
+        },
+
+        function success(data) {
+          console.log("APXOR SDK Initialized");
+        },
+        function error() {
+          console.log("APXOR SDK not initialized");
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <!-- Start of Integrating APXOR Web SDK -->
+
+    <script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          },
+        });
+      });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script>
+      const firebaseConfig = {
+  apiKey: "AIzaSyB3S-chPd0ZlfmNKGRDh7h98ju6Yff5Grw",
+  authDomain: "blackeyes-db7bd.firebaseapp.com",
+  projectId: "blackeyes-db7bd",
+  storageBucket: "blackeyes-db7bd.appspot.com",
+  messagingSenderId: "1032576382391",
+  appId: "1:1032576382391:web:bd958fc9944db290da6432",
+  measurementId: "G-MLY7ESF8NF"
+};
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </body>
+</html>
